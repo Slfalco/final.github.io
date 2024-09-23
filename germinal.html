@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Une page dédiée au célèbre roman Germinal d'Émile Zola avec quelques Easter eggs.">
+    <title>Germinal - Emile Zola</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .hidden-egg {
+            display: none;
+            color: red;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 20px 0;
+        }
+
+        .egg-btn {
+            padding: 10px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .egg-btn:hover {
+            background-color: #3498db;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Germinal - Emile Zola</h1>
+        <p>Explorez l'univers sombre et puissant de Germinal</p>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="section-title">Synopsis</h2>
+            <p>
+                <strong>Germinal</strong> est un roman d'Émile Zola publié en 1885. Il se déroule pendant la deuxième moitié du XIXe siècle,
+                dans le contexte de la révolution industrielle et des conflits sociaux dans le nord de la France. Le roman
+                suit la vie d'Étienne Lantier, un jeune homme qui rejoint les mineurs dans leur lutte contre les conditions de travail
+                inhumaines et pour une meilleure justice sociale.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="section-title">Citation Célèbre</h2>
+            <p class="quote">"La révolte grondait au fond des ténèbres, une fermentation souterraine, vaste et obscure, qui montait des entrailles de la terre."</p>
+        </section>
+
+        <!-- Easter Egg Section -->
+        <section>
+            <h2 class="section-title">Surprises Cachées !</h2>
+            <p>Cliquez sur les boutons pour révéler des Easter eggs cachés dans cette page. Saurez-vous tous les découvrir ?</p>
+
+            <button class="egg-btn" onclick="revealEgg(1)">Easter egg 1</button>
+            <div id="egg1" class="hidden-egg">Bravo, vous avez trouvé un œuf ! Germinal a inspiré plusieurs adaptations cinématographiques et théâtrales.</div>
+
+            <button class="egg-btn" onclick="revealEgg(2)">Easter egg 2</button>
+            <div id="egg2" class="hidden-egg">Félicitations ! Émile Zola a été un pionnier du naturalisme en littérature.</div>
+
+            <button class="egg-btn" onclick="revealEgg(3)">Easter egg 3</button>
+            <div id="egg3" class="hidden-egg">Bien joué ! Le personnage d'Étienne Lantier apparaît aussi dans d'autres romans de la série des Rougon-Macquart.</div>
+        </section>
+		
+	   <p><a href="accueil.html">Page de présentation</a></p>
+
+    </main>
+
+    <script>
+        function revealEgg(eggNumber) {
+            var egg = document.getElementById('egg' + eggNumber);
+            if (egg.style.display === 'none' || egg.style.display === '') {
+                egg.style.display = 'block';
+            } else {
+                egg.style.display = 'none';
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
